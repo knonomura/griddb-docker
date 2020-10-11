@@ -72,7 +72,7 @@ GridDB Dockerfile sample has been confirmed to work in the following environment
     > docker pull docker.pkg.github.com/knonomura/griddb-docker/griddb-nosql:0.1
     > docker pull docker.pkg.github.com/knonomura/griddb-docker/webapi:0.1
     > docker run --rm -d docker.pkg.github.com/knonomura/griddb-docker/griddb-nosql:0.1
-    > docker run --rm docker.pkg.github.com/knonomura/griddb-docker/webapi:0.1
+    > docker run --rm -d docker.pkg.github.com/knonomura/griddb-docker/webapi:0.1
     > docker exec -it <CONTAINER ID for webapi IMAGE> bash
     # curl  https://raw.githubusercontent.com/knonomura/griddb-docker/master/webapi/sample.sh -o sample.sh
     # ./sample.sh
