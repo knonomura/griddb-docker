@@ -66,6 +66,8 @@
     > docker run -it docker.pkg.github.com/knonomura/griddb-docker/python-db-api:0.2 bash
     # python DBAPISample.py
 
+DBAPISample.pyは[こちら](https://github.com/knonomura/griddb-docker/blob/master/python-db-api/4.5/DBAPISample.py)を参照してください。
+
 ## 4. WebAPI
 予めGridDBサーバを起動してください。
 
@@ -76,6 +78,8 @@
     {"count":1}{"columns":[...
     > docker stop <CONTAINER ID for webapi IMAGE>
     
+sample.shは[こちら](https://github.com/knonomura/griddb-docker/blob/master/webapi/4.5/sample.sh)を参照してください。
+
 # GridDB V4.5CEによるNoSQLインタフェースの利用
 
 ## Java Client
