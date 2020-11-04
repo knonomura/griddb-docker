@@ -29,6 +29,10 @@
 ### (CentOS7)
     > docker pull docker.pkg.github.com/knonomura/griddb-docker/griddb:0.2
     > docker run --rm -d docker.pkg.github.com/knonomura/griddb-docker/griddb:0.2
+
+Dockerfileは[こちら](https://github.com/knonomura/griddb-docker/blob/master/griddb/4.5/centos7/Dockerfile)を参照してください。
+また、起動に使われるスクリプト(start-griddb.sh)は[こちら](https://github.com/knonomura/griddb-docker/blob/master/griddb/4.5/centos7/start-griddb.sh)を参照してください。
+
 ### (Ubuntu:bionic)
     > docker pull docker.pkg.github.com/knonomura/griddb-docker/griddb-bionic:0.2
     > docker run --rm -d docker.pkg.github.com/knonomura/griddb-docker/griddb-bionic:0.2
@@ -57,7 +61,7 @@
       -url=jdbc:gs://239.0.0.1:41999/dockerGridDB/public -username=admin -password=admin;
     > CREATE TABLE myTable (id INTEGER PRIMARY KEY, val INTERGER);
 
-[SQLサンプル](SQLSamples.md)を参照してください。
+[SQLサンプル](SQLSamples.md)および[SQLサンプル(2)](SQLSamples2.md)を参照してください。
 
 ## 3. JayDeBeApi(DB-API) (Python環境)
 予めGridDBサーバを起動してください。
