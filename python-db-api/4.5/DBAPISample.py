@@ -1,4 +1,5 @@
 import jaydebeapi
+import json
 
 conn = jaydebeapi.connect("com.toshiba.mwcloud.gs.sql.Driver",
     "jdbc:gs://239.0.0.1:41999/dockerGridDB", ["admin", "admin"], "./gridstore-jdbc.jar")
@@ -11,6 +12,9 @@ curs.execute("INSERT INTO Sample values (0, 'test0'),(1, 'test1'),(2, 'test2'),(
 print('SQL Insert')
 curs.execute("SELECT * from Sample where ID > 2")
 print(curs.fetchall())
+
+curs.execute("EXPLAIN ANALYZE SELECT * from Sample where ID > 2")
+print(json.dumps(curs.fetchall(), indent=4))
 
 curs.close()
 conn.close()
