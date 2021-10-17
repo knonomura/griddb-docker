@@ -8,9 +8,9 @@
 
 |Dockerイメージ名|概要|
 |-|-|
-|griddb| GridDB V4.5CEサーバのインストール＆起動 (CentOS用)|
-|griddb-bionic| GridDB V4.5CEサーバのインストール＆起動 (Ubuntu:bionic用)|
-|griddb-opensuse-15| GridDB V4.5CEサーバのインストール＆起動 (openSUSE leap 15用)|
+|griddb| GridDB V4.6CEサーバのインストール＆起動 (CentOS用)|
+|griddb-bionic| GridDB V4.6CEサーバのインストール＆起動 (Ubuntu:bionic用)|
+|griddb-opensuse-15| GridDB V4.6CEサーバのインストール＆起動 (openSUSE leap 15用)|
 |python-db-api| GridDB JDBCとJayDeBeApi(DB-API)のインストール (Java＆Python環境)|
 |webapi| GridDB WebAPIのインストール＆デーモン起動|
 |java-client| GridDB Javaクライアントライブラリのインストールとサンプルコードのビルド＆実行|
@@ -21,24 +21,24 @@
 |php-client| GridDB PHPクライアントライブラリのインストールとサンプルコードの実行|
 |griddb-nosql| GridDB V4.3CEサーバ(NoSQL)のインストール＆起動 (CentOS用))|
 
-# GridDB V4.5CEによるSQLインタフェースの利用
+# GridDB V4.6CEによるSQLインタフェースの利用
 
 ## 1. GridDB Server
 好みのOSのGridDBサーバをインストール＆起動してください。
 
 ### (CentOS7)
-    > docker pull docker.pkg.github.com/knonomura/griddb-docker/griddb:0.2
-    > docker run --rm -d docker.pkg.github.com/knonomura/griddb-docker/griddb:0.2
+    > docker pull docker.pkg.github.com/knonomura/griddb-docker/griddb:0.3
+    > docker run --rm -d docker.pkg.github.com/knonomura/griddb-docker/griddb:0.3
 
 Dockerfileは[こちら](https://github.com/knonomura/griddb-docker/blob/master/griddb/4.5/centos7/Dockerfile)を参照してください。
 また、起動に使われるスクリプト(start-griddb.sh)は[こちら](https://github.com/knonomura/griddb-docker/blob/master/griddb/4.5/centos7/start-griddb.sh)を参照してください。
 
 ### (Ubuntu:bionic)
-    > docker pull docker.pkg.github.com/knonomura/griddb-docker/griddb-bionic:0.2
-    > docker run --rm -d docker.pkg.github.com/knonomura/griddb-docker/griddb-bionic:0.2
+    > docker pull docker.pkg.github.com/knonomura/griddb-docker/griddb-bionic:0.3
+    > docker run --rm -d docker.pkg.github.com/knonomura/griddb-docker/griddb-bionic:0.3
 ### (openSUSE leap 15)
-    > docker pull docker.pkg.github.com/knonomura/griddb-docker/griddb-opensuse-15:0.2
-    > docker run --rm -d docker.pkg.github.com/knonomura/griddb-docker/griddb-opensuse-15:0.2
+    > docker pull docker.pkg.github.com/knonomura/griddb-docker/griddb-opensuse-15:0.3
+    > docker run --rm -d docker.pkg.github.com/knonomura/griddb-docker/griddb-opensuse-15:0.3
 
 ## 2. SQLWorkbench/J (Java環境)
 予めGridDBサーバを起動してください。
@@ -61,7 +61,7 @@ Dockerfileは[こちら](https://github.com/knonomura/griddb-docker/blob/master/
       -url=jdbc:gs://239.0.0.1:41999/dockerGridDB/public -username=admin -password=admin;
     > CREATE TABLE myTable (id INTEGER PRIMARY KEY, val INTERGER);
 
-[SQLサンプル](SQLSamples.md)および[SQLサンプル(2)](SQLSamples2.md)を参照してください。
+[SQLサンプル](SQLSamples.md)、[SQLサンプル(2)](SQLSamples2.md)および[SQLサンプル(インターバルパーティション)](SQLSamplesForIntervalP.md)を参照してください。
 
 ## 3. JayDeBeApi(DB-API) (Python環境)
 予めGridDBサーバを起動してください。

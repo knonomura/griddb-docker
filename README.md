@@ -8,9 +8,9 @@ GridDB Dockerfile sample has been confirmed to work in the following environment
 
 |IMAGE|Description|
 |-|-|
-|griddb| Install and start GridDB V4.5CE server for CentOS|
-|griddb-bionic| Install and start GridDB V4.5CE server for Ubuntu:bionic|
-|griddb-opensuse-15| Install and start GridDB V4.5CE server for openSUSE leap 15|
+|griddb| Install and start GridDB V4.6CE server for CentOS|
+|griddb-bionic| Install and start GridDB V4.6CE server for Ubuntu:bionic|
+|griddb-opensuse-15| Install and start GridDB V4.6CE server for openSUSE leap 15|
 |python-db-api| Install GridDB JDBC, JayDeBeApi(DB-API) for Java and Python env.|
 |webapi| Install and start GridDB WebAPI daemon|
 |java-client| Install GridDB Java client and build, run a sample program|
@@ -21,19 +21,19 @@ GridDB Dockerfile sample has been confirmed to work in the following environment
 |php-client| Install GridDB PHP client and run a sample program|
 |griddb-nosql| Install and start GridDB NoSQL server (V4.3CE)|
 
-# Using SQL Interface with GridDB V4.5CE
+# Using SQL Interface with GridDB V4.6CE
 
 ## 1. GridDB Server
 
 ### (CentOS7)
-    > docker pull docker.pkg.github.com/knonomura/griddb-docker/griddb:0.2
-    > docker run --rm -d docker.pkg.github.com/knonomura/griddb-docker/griddb:0.2
+    > docker pull docker.pkg.github.com/knonomura/griddb-docker/griddb:0.3
+    > docker run --rm -d docker.pkg.github.com/knonomura/griddb-docker/griddb:0.3
 ### (Ubuntu:bionic)
-    > docker pull docker.pkg.github.com/knonomura/griddb-docker/griddb-bionic:0.2
-    > docker run --rm -d docker.pkg.github.com/knonomura/griddb-docker/griddb-bionic:0.2
+    > docker pull docker.pkg.github.com/knonomura/griddb-docker/griddb-bionic:0.3
+    > docker run --rm -d docker.pkg.github.com/knonomura/griddb-docker/griddb-bionic:0.3
 ### (openSUSE leap 15)
-    > docker pull docker.pkg.github.com/knonomura/griddb-docker/griddb-opensuse-15:0.2
-    > docker run --rm -d docker.pkg.github.com/knonomura/griddb-docker/griddb-opensuse-15:0.2
+    > docker pull docker.pkg.github.com/knonomura/griddb-docker/griddb-opensuse-15:0.3
+    > docker run --rm -d docker.pkg.github.com/knonomura/griddb-docker/griddb-opensuse-15:0.3
 
 ## 2. SQLWorkbench/J on Java Env.
 Please run GridDB Server in advance.
@@ -74,7 +74,7 @@ Please run GridDB Server in advance.
     {"count":1}{"columns":[...
     > docker stop <CONTAINER ID for webapi IMAGE>
     
-# Using NoSQL Interface with GridDB V4.5CE
+# Using NoSQL Interface with GridDB V4.6CE
 
 ## Java Client
 Please run GridDB Server in advance.
