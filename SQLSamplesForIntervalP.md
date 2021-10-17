@@ -48,6 +48,10 @@
     INSERT INTO alertTable VALUES(TIMESTAMP('2020-10-05T14:50:00Z'), 1, 1, 'xxx');
     INSERT INTO alertTable VALUES(TIMESTAMP('2020-10-05T15:20:00Z'), 3, 1, 'xxx');
 
+    NOTE:
+    Please use the month when you try because expiration function is used for Alert Table. 
+    For example, if today is '2021-12-1', '2021-12-##T##:##:##Z'.
+
 ## C. SELECT
 
 ### ALL
