@@ -26,20 +26,20 @@ GridDB Dockerfile sample has been confirmed to work in the following environment
 ## 1. GridDB Server
 
 ### (CentOS7)
-    > docker pull docker.pkg.github.com/knonomura/griddb-docker/griddb:0.3
-    > docker run --rm -d docker.pkg.github.com/knonomura/griddb-docker/griddb:0.3
+    > docker pull ghcr.io/knonomura/griddb-docker/griddb:0.3
+    > docker run --rm -d ghcr.io/knonomura/griddb-docker/griddb:0.3
 ### (Ubuntu:bionic)
-    > docker pull docker.pkg.github.com/knonomura/griddb-docker/griddb-bionic:0.3
-    > docker run --rm -d docker.pkg.github.com/knonomura/griddb-docker/griddb-bionic:0.3
+    > docker pull ghcr.io/knonomura/griddb-docker/griddb-bionic:0.3
+    > docker run --rm -d ghcr.io/knonomura/griddb-docker/griddb-bionic:0.3
 ### (openSUSE leap 15)
-    > docker pull docker.pkg.github.com/knonomura/griddb-docker/griddb-opensuse-15:0.3
-    > docker run --rm -d docker.pkg.github.com/knonomura/griddb-docker/griddb-opensuse-15:0.3
+    > docker pull ghcr.io/knonomura/griddb-docker/griddb-opensuse-15:0.3
+    > docker run --rm -d ghcr.io/knonomura/griddb-docker/griddb-opensuse-15:0.3
 
 ## 2. SQLWorkbench/J on Java Env.
 Please run GridDB Server in advance.
 
-    > docker pull docker.pkg.github.com/knonomura/griddb-docker/python-db-api:0.2
-    > docker run -it docker.pkg.github.com/knonomura/griddb-docker/python-db-api:0.2 bash
+    > docker pull ghcr.io/knonomura/griddb-docker/python-db-api:0.2
+    > docker run -it ghcr.io/knonomura/griddb-docker/python-db-api:0.2 bash
 
 Note. Please download after confirming the license of SQL Workbench/J.  
 "This software is licensed under a modified version of the Apache License, Version 2.0 http://sql-workbench.eu/manual/license.html that restricts the use of the software for certain organizations."
@@ -60,27 +60,27 @@ Please refer to [SQL Samples](SQLSamples.md).
 ## 3. JayDeBeApi(DB-API) on Python Env.
 Please run GridDB Server in advance.
 
-    > docker pull docker.pkg.github.com/knonomura/griddb-docker/python-db-api:0.2
-    > docker run -it docker.pkg.github.com/knonomura/griddb-docker/python-db-api:0.2 bash
+    > docker pull ghcr.io/knonomura/griddb-docker/python-db-api:0.2
+    > docker run -it ghcr.io/knonomura/griddb-docker/python-db-api:0.2 bash
     # python DBAPISample.py
 
 ## 4. WebAPI
 Please run GridDB Server in advance.
 
-    > docker pull docker.pkg.github.com/knonomura/griddb-docker/webapi:0.2
-    > docker run --rm -d docker.pkg.github.com/knonomura/griddb-docker/webapi:0.2
+    > docker pull ghcr.io/knonomura/griddb-docker/webapi:0.2
+    > docker run --rm -d ghcr.io/knonomura/griddb-docker/webapi:0.2
     > docker exec -it <CONTAINER ID for webapi IMAGE> bash
     # ./sample.sh
     {"count":1}{"columns":[...
     > docker stop <CONTAINER ID for webapi IMAGE>
-    
+
 # Using NoSQL Interface with GridDB V4.6CE
 
 ## Java Client
 Please run GridDB Server in advance.
 
-    > docker pull docker.pkg.github.com/knonomura/griddb-docker/java-client:0.1
-    > docker run --rm docker.pkg.github.com/knonomura/griddb-docker/java-client:0.1
+    > docker pull ghcr.io/knonomura/griddb-docker/java-client:0.1
+    > docker run --rm ghcr.io/knonomura/griddb-docker/java-client:0.1
     ...
     Person:  name=name02 status=false count=2 lob=[65, 66, 67, 68, 69, 70, 71, 72, 73, 74]
     ...
@@ -88,96 +88,96 @@ Please run GridDB Server in advance.
 ## C Client
 Please run GridDB Server in advance.
 
-    > docker pull docker.pkg.github.com/knonomura/griddb-docker/c-client:0.1
-    > docker run --rm docker.pkg.github.com/knonomura/griddb-docker/c-client:0.1
+    > docker pull ghcr.io/knonomura/griddb-docker/c-client:0.1
+    > docker run --rm ghcr.io/knonomura/griddb-docker/c-client:0.1
     Person: name=name02 status=false count=2 lob=[65, 66, 67, 68, 69, 70, 71, 72, 73, 74]
 
 ## Python Client
 Please run GridDB Server in advance.
 
-    > docker pull docker.pkg.github.com/knonomura/griddb-docker/python-client:0.1
-    > docker run --rm docker.pkg.github.com/knonomura/griddb-docker/python-client:0.1
+    > docker pull ghcr.io/knonomura/griddb-docker/python-client:0.1
+    > docker run --rm ghcr.io/knonomura/griddb-docker/python-client:0.1
     Person: name=name02 status=False count=2 lob=[65, 66, 67, 68, 69, 70, 71, 72, 73, 74]
 
 ## Node.JS Client
 Please run GridDB Server in advance.
 
-    > docker pull docker.pkg.github.com/knonomura/griddb-docker/nodejs-client:0.1
-    > docker run --rm docker.pkg.github.com/knonomura/griddb-docker/nodejs-client:0.1
+    > docker pull ghcr.io/knonomura/griddb-docker/nodejs-client:0.1
+    > docker run --rm ghcr.io/knonomura/griddb-docker/nodejs-client:0.1
     [ 'name01', false, 1, <Buffer 41 42 43 44 45 46 47 48 49 4a> ]
 
 ## Go Client
 Please run GridDB Server in advance.
 
-    > docker pull docker.pkg.github.com/knonomura/griddb-docker/go-client:0.1
-    > docker run --rm docker.pkg.github.com/knonomura/griddb-docker/go-client:0.1
+    > docker pull ghcr.io/knonomura/griddb-docker/go-client:0.1
+    > docker run --rm ghcr.io/knonomura/griddb-docker/go-client:0.1
     Person: name= name02  status= false  count= 2  lob= [65 66 67 68 69 70 71 72 73 74]
 
 ## PHP Client
 Please run GridDB Server in advance.
 
-    > docker pull docker.pkg.github.com/knonomura/griddb-docker/php-client:0.1
-    > docker run --rm docker.pkg.github.com/knonomura/griddb-docker/php-client:0.1
+    > docker pull ghcr.io/knonomura/griddb-docker/php-client:0.1
+    > docker run --rm ghcr.io/knonomura/griddb-docker/php-client:0.1
     Person: name=name02 status=false count=2 lob=ABCDEFGHIJ
 
 
 # Using NoSQL Interface with GridDB V4.3CE
 
 ## Java Client
-    > docker pull docker.pkg.github.com/knonomura/griddb-docker/griddb-nosql:0.1
-    > docker pull docker.pkg.github.com/knonomura/griddb-docker/java-client:0.1
-    > docker run --rm -d docker.pkg.github.com/knonomura/griddb-docker/griddb-nosql:0.1
-    > docker run --rm docker.pkg.github.com/knonomura/griddb-docker/java-client:0.1
+    > docker pull ghcr.io/knonomura/griddb-docker/griddb-nosql:0.1
+    > docker pull ghcr.io/knonomura/griddb-docker/java-client:0.1
+    > docker run --rm -d ghcr.io/knonomura/griddb-docker/griddb-nosql:0.1
+    > docker run --rm ghcr.io/knonomura/griddb-docker/java-client:0.1
     ...
     Person:  name=name02 status=false count=2 lob=[65, 66, 67, 68, 69, 70, 71, 72, 73, 74]
     ...
     > docker stop <CONTAINER ID for griddb-nosql IMAGE>
 
 ## C Client
-    > docker pull docker.pkg.github.com/knonomura/griddb-docker/griddb-nosql:0.1
-    > docker pull docker.pkg.github.com/knonomura/griddb-docker/c-client:0.1
-    > docker run --rm -d docker.pkg.github.com/knonomura/griddb-docker/griddb-nosql:0.1
-    > docker run --rm docker.pkg.github.com/knonomura/griddb-docker/c-client:0.1
+    > docker pull ghcr.io/knonomura/griddb-docker/griddb-nosql:0.1
+    > docker pull ghcr.io/knonomura/griddb-docker/c-client:0.1
+    > docker run --rm -d ghcr.io/knonomura/griddb-docker/griddb-nosql:0.1
+    > docker run --rm ghcr.io/knonomura/griddb-docker/c-client:0.1
     Person: name=name02 status=false count=2 lob=[65, 66, 67, 68, 69, 70, 71, 72, 73, 74]
     > docker stop <CONTAINER ID for griddb-nosql IMAGE>
 
 ## Python Client
-    > docker pull docker.pkg.github.com/knonomura/griddb-docker/griddb-nosql:0.1
-    > docker pull docker.pkg.github.com/knonomura/griddb-docker/python-client:0.1
-    > docker run --rm -d docker.pkg.github.com/knonomura/griddb-docker/griddb-nosql:0.1
-    > docker run --rm docker.pkg.github.com/knonomura/griddb-docker/python-client:0.1
+    > docker pull ghcr.io/knonomura/griddb-docker/griddb-nosql:0.1
+    > docker pull ghcr.io/knonomura/griddb-docker/python-client:0.1
+    > docker run --rm -d ghcr.io/knonomura/griddb-docker/griddb-nosql:0.1
+    > docker run --rm ghcr.io/knonomura/griddb-docker/python-client:0.1
     Person: name=name02 status=False count=2 lob=[65, 66, 67, 68, 69, 70, 71, 72, 73, 74]
     > docker stop <CONTAINER ID for griddb-nosql IMAGE>
 
 ## Node.JS Client
-    > docker pull docker.pkg.github.com/knonomura/griddb-docker/griddb-nosql:0.1
-    > docker pull docker.pkg.github.com/knonomura/griddb-docker/nodejs-client:0.1
-    > docker run --rm -d docker.pkg.github.com/knonomura/griddb-docker/griddb-nosql:0.1
-    > docker run --rm docker.pkg.github.com/knonomura/griddb-docker/nodejs-client:0.1
+    > docker pull ghcr.io/knonomura/griddb-docker/griddb-nosql:0.1
+    > docker pull ghcr.io/knonomura/griddb-docker/nodejs-client:0.1
+    > docker run --rm -d ghcr.io/knonomura/griddb-docker/griddb-nosql:0.1
+    > docker run --rm ghcr.io/knonomura/griddb-docker/nodejs-client:0.1
     [ 'name01', false, 1, <Buffer 41 42 43 44 45 46 47 48 49 4a> ]
     > docker stop <CONTAINER ID for griddb-nosql IMAGE>
 
 ## Go Client
-    > docker pull docker.pkg.github.com/knonomura/griddb-docker/griddb-nosql:0.1
-    > docker pull docker.pkg.github.com/knonomura/griddb-docker/go-client:0.1
-    > docker run --rm -d docker.pkg.github.com/knonomura/griddb-docker/griddb-nosql:0.1
-    > docker run --rm docker.pkg.github.com/knonomura/griddb-docker/go-client:0.1
+    > docker pull ghcr.io/knonomura/griddb-docker/griddb-nosql:0.1
+    > docker pull ghcr.io/knonomura/griddb-docker/go-client:0.1
+    > docker run --rm -d ghcr.io/knonomura/griddb-docker/griddb-nosql:0.1
+    > docker run --rm ghcr.io/knonomura/griddb-docker/go-client:0.1
     Person: name= name02  status= false  count= 2  lob= [65 66 67 68 69 70 71 72 73 74]
     > docker stop <CONTAINER ID for griddb-nosql IMAGE>
 
 ## PHP Client
-    > docker pull docker.pkg.github.com/knonomura/griddb-docker/griddb-nosql:0.1
-    > docker pull docker.pkg.github.com/knonomura/griddb-docker/php-client:0.1
-    > docker run --rm -d docker.pkg.github.com/knonomura/griddb-docker/griddb-nosql:0.1
-    > docker run --rm docker.pkg.github.com/knonomura/griddb-docker/php-client:0.1
+    > docker pull ghcr.io/knonomura/griddb-docker/griddb-nosql:0.1
+    > docker pull ghcr.io/knonomura/griddb-docker/php-client:0.1
+    > docker run --rm -d ghcr.io/knonomura/griddb-docker/griddb-nosql:0.1
+    > docker run --rm ghcr.io/knonomura/griddb-docker/php-client:0.1
     Person: name=name02 status=false count=2 lob=ABCDEFGHIJ
     > docker stop <CONTAINER ID for griddb-nosql IMAGE>
 
 ## WebAPI
-    > docker pull docker.pkg.github.com/knonomura/griddb-docker/griddb-nosql:0.1
-    > docker pull docker.pkg.github.com/knonomura/griddb-docker/webapi:0.1
-    > docker run --rm -d docker.pkg.github.com/knonomura/griddb-docker/griddb-nosql:0.1
-    > docker run --rm -d docker.pkg.github.com/knonomura/griddb-docker/webapi:0.1
+    > docker pull ghcr.io/knonomura/griddb-docker/griddb-nosql:0.1
+    > docker pull ghcr.io/knonomura/griddb-docker/webapi:0.1
+    > docker run --rm -d ghcr.io/knonomura/griddb-docker/griddb-nosql:0.1
+    > docker run --rm -d ghcr.io/knonomura/griddb-docker/webapi:0.1
     > docker exec -it <CONTAINER ID for webapi IMAGE> bash
     # curl  https://raw.githubusercontent.com/knonomura/griddb-docker/master/webapi/sample.sh -o sample.sh
     # ./sample.sh
